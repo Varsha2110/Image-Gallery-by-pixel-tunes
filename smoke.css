@@ -32,22 +32,48 @@ video {
 
 h1 {
     position: absolute;
-    display: flex; /* Ensures text & logo stay on the same line */
-    align-items: center; /* Align text and image properly */
+    display: flex;
+    flex-wrap: wrap; /* Prevents breaking into multiple lines */
+    align-items: center;
     justify-content: center;
     color: #fff;
-    font-size: 5em;
+    font-size: 8vw; /* Responsive font size */
     font-family: sans-serif;
-    z-index: 1; /* Ensures text is above the video */
+    z-index: 1;
     letter-spacing: 1rem;
     text-transform: uppercase;
-    white-space: nowrap; /* Prevents text from breaking into a new line */
+    white-space: nowrap; /* Prevents breaking */
 }
 
 h1 span img {
-    height: 70px;
-    width: 70px;
-    margin: 0 10px; 
+    height: 10vw; /* Responsive logo size */
+    width: 10vw;
+    margin: 0 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+        letter-spacing: 0.5rem;
+    }
+    
+    h1 span img {
+        height: 8vw;
+        width: 8vw;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 4vw;
+        letter-spacing: 0.3rem;
+    }
+    
+    h1 span img {
+        height: 6vw;
+        width: 6vw;
+    }
 }
 
 h1 span {
